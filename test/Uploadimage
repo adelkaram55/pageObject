@@ -1,0 +1,18 @@
+module.exports = {
+  
+  'Demo test ecosia.org' : function (browser) {
+
+    browser
+      .url('https://admin-dev.story-file.optima.io/login')
+       .waitForElementVisible('body')
+        .setValue('input[type=email]', 'adelkaram0001@gmail.com')
+       .setValue('input[type=password]', 'adeladel')
+      .click('button[type=submit]')
+//navigate to user screen 
+      .waitForElementVisible('button')
+       .click('button[type=button]')
+        .click('xpath', '//*[@id="app"]/div/div/div/div[2]/div[1]/div/div/div/nav/div/div/div[2]/ul/li[1]/a')
+       .waitForElementVisible('body',10000)
+      .waitForElementVisible('button');
+
+  }
