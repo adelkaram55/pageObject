@@ -5,9 +5,9 @@
 
   <testsuite name="Uploadimage"
     errors="0" failures="0" hostname="" id="" package="Uploadimage" skipped="0"
-    tests="1" time="29.86" timestamp="">
+    tests="1" time="29.07" timestamp="">
   
-    <testcase name="Upload image" classname="Uploadimage" time="29.86" assertions="5">
+    <testcase name="Upload image" classname="Uploadimage" time="29.07" assertions="5">
 
     
 
