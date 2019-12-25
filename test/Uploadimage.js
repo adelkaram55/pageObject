@@ -1,27 +1,33 @@
 module.exports = {
   
-  'Upload image' : function (browser) {
+  'Uploadimage' : function (browser) {
 
     browser
-      .url('https://admin-dev.story-file.optima.io/login')
+      .url('https://admin.dev.storyfile.com/login')
        .waitForElementVisible('body')
         .setValue('input[type=email]', 'adelkaram0001@gmail.com')
        .setValue('input[type=password]', 'adeladel')
       .click('button[type=submit]')
 //navigate to user screen 
-      .waitForElementVisible('button')
-       .click('button[type=button]')
+       .pause(5000)
         .click('xpath', '//*[@id="app"]/div/div/div/div[2]/div[1]/div/div/div/nav/div/div/div[2]/ul/li[1]/a')
        .waitForElementVisible('body',10000)
-      .waitForElementVisible('button');
+      .waitForElementVisible('button')
+      .setValue('input[type=text]','adelbulk')
+      .setValue('input[type=text]','\n')
+      
 //Upload image process
-browser.click('xpath','//*[@id="app"]/div/div/div/div[2]/div[2]/div/div[2]/div/div/div/div/ul/li[8]/a')
-.click('xpath','//*[@id="app"]/div/div/div/div[2]/div[2]/div/div[2]/div/div/div/table/tbody/tr[18]/td[5]/button[1]/span')
-.setValue('input#formFieldimage', require('path').resolve(__dirname + '/' +'OriginalProfileImage.png'))
-.click('button[type=submit]')
-.pause(5000)
-.waitForElementVisible('body')
-.pause(10000)
+        browser.click('.btn-edit')
+        .pause(2000)
+        .waitForElementVisible('#formFieldimage')
+        .setValue('input#formFieldimage', require('path').resolve(__dirname + '/' +'OriginalProfileImage.png'))
+        .click('button[type=submit]')
+        .pause(10000)
+        .waitForElementVisible('body')
+        .pause(10000)
+        browser.assert.attributeContains(".row-image", "src", "https://storyfile-dev-development.s3.amazonaws.com/UserPersonalImage510?");
+    
+
 
   }
   }

@@ -5,9 +5,9 @@
 
   <testsuite name="errorDublicateEmail"
     errors="0" failures="0" hostname="" id="" package="errorDublicateEmail" skipped="0"
-    tests="1" time="19.72" timestamp="">
+    tests="1" time="24.05" timestamp="">
   
-    <testcase name="Error Dublicate Email" classname="errorDublicateEmail" time="19.72" assertions="6">
+    <testcase name="Error Dublicate Email" classname="errorDublicateEmail" time="24.05" assertions="6">
 
     
 

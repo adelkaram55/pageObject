@@ -1,9 +1,9 @@
 
 module.exports = {
   
-  'Private/public mode' : function (browser) {
+  'Private/public mode' : function (client) {
 
-    browser
+    client
       .url('https://admin-dev.story-file.optima.io/login')
        .waitForElementVisible('body')
          .setValue('input[type=email]', 'adelkaram0001@gmail.com')
@@ -16,22 +16,16 @@ module.exports = {
       //Navigate to user screen
       .click('xpath', '//*[@id="app"]/div/div/div/div[2]/div[1]/div/div/div/nav/div/div/div[2]/ul/li[1]/a')
        .waitForElementVisible('input[name=search]')
-
-      //  this.demotest=function(browser){
-      //    browser.setValue('input[type=text]',['rose',browser.keys.Enter]);
-      //  };
-       browser.setValue('input[type=text]',['rose',browser.keys.Enter]);
-      //   .keys(browser.Keys.Enter)
-        
-        // browser.keys('\ue007')
-        
-        
-       browser.pause(5000);
+      .setValue('input[type=text]', 'adelBulk ');
+       client.setValue('input[type=text]', '\n')
+       .pause(5000)
       //Activate private mode & public mode
 
-      browser.element('css selector', '.btn-private')
+      .element('css selector', '.btn-private')
        .waitForElementVisible('.btn-private')
         .click('.btn-private')
+        .assert.containsText('.btn-private','Make Public')
+        .pause(5000)
       
       .end();
       

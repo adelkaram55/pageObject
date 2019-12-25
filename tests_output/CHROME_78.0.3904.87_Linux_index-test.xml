@@ -5,9 +5,11 @@
 
   <testsuite name="index-test"
     errors="0" failures="0" hostname="" id="" package="index-test" skipped="0"
-    tests="1" time="15.80" timestamp="">
+    tests="1" time="23.81" timestamp="">
   
-    <testcase name="Private/public mode" classname="index-test" time="15.80" assertions="4">
+    <testcase name="Private/public mode" classname="index-test" time="23.81" assertions="5">
+
+    
 
     
 
