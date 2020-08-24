@@ -1,0 +1,3 @@
+giRun test 
+ nightwatch -t test/downloadfile.js
+ 
