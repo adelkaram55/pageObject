@@ -40,7 +40,7 @@ module.exports={
   },
   'download file' : function (browser){
       browser
-       dfdsfsdfs
+        
       .end();
     }
 };
